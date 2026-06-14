@@ -59,7 +59,7 @@ mcp-publisher publish server.json
 The hosted remote MCP can be published to Smithery with:
 
 ```bash
-smithery mcp publish https://texthumanizer.pro/mcp -n khadinakbarlabs/humanizer-pro
+smithery mcp publish https://texthumanizer.pro/mcp -n khadin-akbar/humanizer-pro
 ```
 
 ## Responsible Use
