@@ -10,7 +10,7 @@
 - Website: `https://texthumanizer.pro`
 - Repository: `https://github.com/khadinakbarlabs/humanizer-pro-mcp`
 - Remote MCP URL: `https://texthumanizer.pro/mcp`
-- Support: `support@texthumanizer.pro`
+- Support: `hello@khadinakbar.com`
 - Privacy: `https://texthumanizer.pro/privacy`
 - Terms: `https://texthumanizer.pro/terms`
 

@@ -19,4 +19,4 @@ The current hosted-service policies are available at:
 - https://texthumanizer.pro/privacy
 - https://texthumanizer.pro/terms
 
-For access, deletion, privacy, or support requests, email `support@texthumanizer.pro`.
+For access, deletion, privacy, or support requests, email `hello@khadinakbar.com`.

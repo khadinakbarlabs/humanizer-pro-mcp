@@ -6,7 +6,7 @@
 - An explicit rewrite or scan sends the supplied text to the hosted Humanizer PRO service at `https://texthumanizer.pro/mcp`.
 - Authentication uses the user's Humanizer PRO account through OAuth.
 - Rewrite requests may save original and rewritten text to the authenticated user's account history.
-- The hosted service may use subprocessors to perform rewriting or naturalness analysis. Refer users to `https://texthumanizer.pro/privacy` for the current policy and `support@texthumanizer.pro` for data requests.
+- The hosted service may use subprocessors to perform rewriting or naturalness analysis. Refer users to `https://texthumanizer.pro/privacy` for the current policy and `hello@khadinakbar.com` for data requests.
 
 Do not state that submitted text is never stored unless the live policy and observed service behavior support that claim.
 

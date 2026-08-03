@@ -1,6 +1,6 @@
 # Security Policy
 
-Report security issues privately by emailing `support@texthumanizer.pro`.
+Report security issues privately by emailing `hello@khadinakbar.com`.
 
 Please do not open public GitHub issues for vulnerabilities, OAuth callback issues, account access issues, or suspected data exposure.
 

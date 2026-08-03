@@ -95,7 +95,7 @@ The workflow confirms rewrites over 500 words, sends the complete text in one ca
 - Documentation: `https://texthumanizer.pro/mcp-docs`
 - Privacy: `https://texthumanizer.pro/privacy`
 - Terms: `https://texthumanizer.pro/terms`
-- Support: `support@texthumanizer.pro`
+- Support: `hello@khadinakbar.com`
 
 No API key is included or required by this repository. Each user authenticates through the hosted OAuth flow and uses their own Humanizer PRO word balance.
 
