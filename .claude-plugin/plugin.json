@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "humanizer-pro",
+  "displayName": "Humanizer PRO",
+  "version": "1.1.0",
+  "description": "Rewrite text for clarity and natural readability with the hosted Humanizer PRO service.",
+  "author": {
+    "name": "Khadin Akbar Labs",
+    "email": "support@texthumanizer.pro",
+    "url": "https://texthumanizer.pro"
+  },
+  "homepage": "https://texthumanizer.pro/mcp-docs",
+  "repository": "https://github.com/khadinakbarlabs/humanizer-pro-mcp",
+  "license": "MIT",
+  "keywords": [
+    "humanizer",
+    "text-rewriting",
+    "writing",
+    "natural-language",
+    "mcp"
+  ],
+  "skills": "./skills/"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "humanizer-pro": {
+      "type": "http",
+      "url": "https://texthumanizer.pro/mcp"
+    }
+  }
+}

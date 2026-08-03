@@ -1,10 +1,22 @@
 # Privacy
 
-The Humanizer Pro MCP connector sends user-provided text to the hosted Humanizer Pro service only when a user explicitly calls a tool such as `humanize_text` or `scan_ai_detection`.
+## Public package
 
-The connector requires OAuth authentication so usage can be associated with the user's Humanizer Pro account and word balance.
+This repository contains instructions, manifests, assets, tests, and remote-connection metadata. It includes no service credentials, user content, account data, telemetry, install hook, or proprietary rewriting code.
 
-For full terms and privacy details, see:
+## Hosted Humanizer PRO service
 
-- `https://texthumanizer.pro/privacy`
-- `https://texthumanizer.pro/terms`
+The package connects to `https://texthumanizer.pro/mcp`. A user-provided text is sent to the hosted service only after an explicit `humanize_text` or `scan_ai_detection` request.
+
+- Authentication uses the user's Humanizer PRO account through OAuth.
+- Rewrites use the authenticated account's word balance.
+- Rewrite requests may save original and rewritten text to the user's Humanizer PRO account history.
+- The hosted service may use subprocessors for rewriting and naturalness analysis.
+- Balance and plan tools return information associated with the authenticated account.
+
+The current hosted-service policies are available at:
+
+- https://texthumanizer.pro/privacy
+- https://texthumanizer.pro/terms
+
+For access, deletion, privacy, or support requests, email `support@texthumanizer.pro`.

@@ -1,0 +1,47 @@
+{
+  "name": "humanizer-pro",
+  "version": "1.1.0",
+  "description": "Rewrite text for clarity and natural readability with the hosted Humanizer PRO service.",
+  "author": {
+    "name": "Khadin Akbar Labs",
+    "email": "support@texthumanizer.pro",
+    "url": "https://texthumanizer.pro"
+  },
+  "homepage": "https://texthumanizer.pro/mcp-docs",
+  "repository": "https://github.com/khadinakbarlabs/humanizer-pro-mcp",
+  "license": "MIT",
+  "keywords": [
+    "humanizer",
+    "text-rewriting",
+    "writing",
+    "natural-language",
+    "mcp",
+    "claude",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Humanizer PRO",
+    "shortDescription": "Rewrite text for clearer, more natural reading.",
+    "longDescription": "Connect Humanizer PRO to rewrite authorized text in Stealth, Academic, or SEO mode, analyze writing naturalness, check word balance, and view plans through the hosted OAuth MCP service.",
+    "developerName": "Khadin Akbar Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://texthumanizer.pro",
+    "privacyPolicyURL": "https://texthumanizer.pro/privacy",
+    "termsOfServiceURL": "https://texthumanizer.pro/terms",
+    "defaultPrompt": [
+      "Humanize this draft while preserving its meaning.",
+      "Analyze how natural this paragraph reads.",
+      "Check my Humanizer PRO word balance."
+    ],
+    "brandColor": "#6D5EF5",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "screenshots": []
+  }
+}

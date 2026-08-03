@@ -1,0 +1,35 @@
+{
+  "name": "humanizer-pro-agent-skill",
+  "version": "1.1.0",
+  "description": "Portable Humanizer PRO Agent Skill and plugin manifests for text rewriting and naturalness analysis.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node scripts/validate-release.mjs",
+    "release:check": "npm test && npm run validate"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "agent-skills",
+    "humanizer",
+    "text-rewriting",
+    "claude-code",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "mcp"
+  ],
+  "author": "Khadin Akbar Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khadinakbarlabs/humanizer-pro-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khadinakbarlabs/humanizer-pro-mcp/issues"
+  },
+  "homepage": "https://texthumanizer.pro/mcp-docs"
+}

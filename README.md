@@ -1,71 +1,130 @@
-# Humanizer Pro MCP
+# Humanizer PRO — text humanization plugin and Agent Skill
 
-Official remote MCP connector metadata for Humanizer Pro.
+[![skills.sh](https://skills.sh/b/khadinakbarlabs/humanizer-pro-mcp)](https://skills.sh/khadinakbarlabs/humanizer-pro-mcp/humanize-text)
+[![validate](https://github.com/khadinakbarlabs/humanizer-pro-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/khadinakbarlabs/humanizer-pro-mcp/actions/workflows/validate.yml)
+[![license](https://img.shields.io/badge/license-MIT-6d5ef5)](LICENSE)
 
-Humanizer Pro lets AI clients connect to the hosted Humanizer Pro backend at `https://texthumanizer.pro/mcp` to rewrite text for clarity and natural readability, analyze writing naturalness, check word balance, and view subscription plans.
+Humanizer PRO connects AI clients to the hosted Humanizer PRO text-editing service. It can rewrite text you own or are allowed to edit in Stealth, Academic, or SEO mode, analyze writing naturalness, check your word balance, and show available plans.
 
-This repository is intentionally open source metadata and documentation only. The Humanizer Pro web app, proprietary backend, billing logic, and rewriting engine are not included here.
+This repository is the official open-source distribution package. It contains the portable `humanize-text` Agent Skill, native Claude Code and Codex plugin manifests, marketplace metadata, and the remote MCP connection. The proprietary rewriting engine, billing logic, and service credentials remain hosted at [texthumanizer.pro](https://texthumanizer.pro).
 
-## Remote MCP Server
+## Install
 
-- Name: `Humanizer Pro`
+### Claude Code
+
+```text
+/plugin marketplace add khadinakbarlabs/humanizer-pro-mcp
+/plugin install humanizer-pro@humanizer-pro
+```
+
+Claude loads the skill and the hosted MCP server. Sign in with your Humanizer PRO account when the first tool requires authentication.
+
+### OpenAI Codex
+
+```bash
+codex plugin marketplace add khadinakbarlabs/humanizer-pro-mcp
+codex plugin add humanizer-pro@humanizer-pro
+```
+
+Codex loads the same skill and remote MCP connection. Public Codex marketplace availability is separate from this GitHub-hosted marketplace and depends on OpenAI review.
+
+### skills.sh and compatible agents
+
+```bash
+npx skills add khadinakbarlabs/humanizer-pro-mcp --skill humanize-text
+```
+
+Select a specific supported agent when needed:
+
+```bash
+npx skills add khadinakbarlabs/humanizer-pro-mcp --skill humanize-text --agent claude-code --yes
+npx skills add khadinakbarlabs/humanizer-pro-mcp --skill humanize-text --agent codex --yes
+npx skills add khadinakbarlabs/humanizer-pro-mcp --skill humanize-text --agent cursor --yes
+```
+
+Browse the catalog entry at [skills.sh/khadinakbarlabs/humanizer-pro-mcp/humanize-text](https://skills.sh/khadinakbarlabs/humanizer-pro-mcp/humanize-text).
+
+### GitHub Copilot
+
+GitHub CLI 2.90 or later can install the skill for Copilot or another supported host:
+
+```bash
+gh skill install khadinakbarlabs/humanizer-pro-mcp humanize-text
+```
+
+The repository's `skills/humanize-text/SKILL.md` follows the open Agent Skills specification.
+
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/khadinakbarlabs/humanizer-pro-mcp
+```
+
+Connect the hosted MCP endpoint when your Gemini setup does not import it automatically:
+
+```text
+https://texthumanizer.pro/mcp
+```
+
+### ChatGPT or another MCP client
+
+Add a custom/developer connector using:
+
+```text
+https://texthumanizer.pro/mcp
+```
+
+Then sign in with your Humanizer PRO account. Public ChatGPT app directory availability depends on OpenAI review.
+
+## What the skill does
+
+| Request | Tool | Effect |
+| --- | --- | --- |
+| Humanize or rewrite authorized text | `humanize_text` | Uses Stealth, Academic, or SEO mode and deducts the processed words from the account balance. |
+| Analyze writing naturalness | `scan_ai_detection` | Returns estimated AI-likeness and human-likeness signals without rewriting. |
+| Check remaining usage | `check_word_balance` | Returns plan, subscription words, purchased credits, and total available words. |
+| View plans | `get_subscription_plans` | Returns available plans and the current plan without purchasing anything. |
+
+The workflow confirms rewrites over 500 words, sends the complete text in one call, prevents automatic billable retries, and reports the remaining balance when available.
+
+## Remote service
+
 - Streamable HTTP: `https://texthumanizer.pro/mcp`
 - SSE fallback: `https://texthumanizer.pro/sse`
+- OAuth metadata: `https://texthumanizer.pro/.well-known/oauth-authorization-server`
 - Health: `https://texthumanizer.pro/health`
-- Server card: `https://texthumanizer.pro/.well-known/mcp/server-card.json`
-- Website: `https://texthumanizer.pro`
+- Documentation: `https://texthumanizer.pro/mcp-docs`
+- Privacy: `https://texthumanizer.pro/privacy`
+- Terms: `https://texthumanizer.pro/terms`
+- Support: `support@texthumanizer.pro`
 
-## Tools
+No API key is included or required by this repository. Each user authenticates through the hosted OAuth flow and uses their own Humanizer PRO word balance.
 
-| Tool | Type | Description |
-| --- | --- | --- |
-| `humanize_text` | Write | Rewrites text the user is allowed to edit for clarity, tone, and natural readability. Supports `stealth`, `academic`, and `seo` modes. |
-| `scan_ai_detection` | Read | Evaluates how natural a piece of writing reads and returns AI-likeness and human-likeness scores. |
-| `check_word_balance` | Read | Returns the authenticated user's plan, subscription words, purchased credits, and total available words. |
-| `get_subscription_plans` | Read | Returns available Humanizer Pro plans and the user's current plan. |
+## Responsible use
 
-## Authentication
+Use Humanizer PRO only for text you own or are authorized to revise. Preserve citations and factual meaning, and follow applicable academic, workplace, client, publisher, and platform disclosure rules.
 
-The remote MCP server uses OAuth. Users connect with their Humanizer Pro account and usage is billed against their existing word balance.
+Naturalness and detector scores are probabilistic. This package does not promise that a rewrite will pass Turnitin, GPTZero, Originality.ai, Copyleaks, ZeroGPT, or any other detector.
 
-No API key is required in this repository.
-
-## Connect From ChatGPT
-
-1. Open ChatGPT settings.
-2. Go to Apps and Connectors.
-3. Add a developer or custom connector using `https://texthumanizer.pro/mcp`.
-4. Sign in with your Humanizer Pro account when prompted.
-
-Public ChatGPT app directory availability depends on OpenAI review.
-
-## Connect From Claude
-
-Claude supports remote MCP custom connectors. Add `https://texthumanizer.pro/mcp` as a custom connector and authenticate with your Humanizer Pro account.
-
-Directory availability depends on Anthropic review.
-
-## MCP Registry
-
-This repo includes `server.json` using the official MCP Registry format:
+## Validate
 
 ```bash
+npm run release:check
+claude plugin validate . --strict
+python3 /path/to/skill-creator/scripts/quick_validate.py skills/humanize-text
 mcp-publisher validate server.json
-mcp-publisher publish server.json
 ```
 
-## Smithery
+The release check validates every manifest, referenced asset, skill identifier, MCP URL, version, and public text file for common secret and personal-path patterns.
 
-The hosted remote MCP can be published to Smithery with:
+## Directory metadata
 
-```bash
-smithery mcp publish https://texthumanizer.pro/mcp -n khadin-akbar/humanizer-pro
-```
-
-## Responsible Use
-
-Humanizer Pro is for editing content you own or are allowed to revise. Users remain responsible for following academic, workplace, publisher, and platform disclosure rules.
+- `server.json` follows the official MCP Registry format.
+- `.claude-plugin/marketplace.json` makes this repository a Claude Code marketplace.
+- `.agents/plugins/marketplace.json` makes it a Codex plugin marketplace.
+- `.codex-plugin/plugin.json`, `.claude-plugin/plugin.json`, `.cursor-plugin/plugin.json`, and `gemini-extension.json` provide native package surfaces.
+- `skills/humanize-text/SKILL.md` is the portable source used by skills.sh, Copilot, Codex, Claude Code, Cursor, and other Agent Skills-compatible clients.
 
 ## License
 
-The metadata and documentation in this repository are licensed under MIT.
+The skill, manifests, metadata, documentation, tests, and validation scripts in this repository are licensed under MIT. The hosted Humanizer PRO service and proprietary rewriting engine are not included in that license.

@@ -1,0 +1,21 @@
+{
+  "name": "humanizer-pro",
+  "interface": {
+    "displayName": "Humanizer PRO"
+  },
+  "plugins": [
+    {
+      "name": "humanizer-pro",
+      "version": "1.1.0",
+      "source": {
+        "source": "local",
+        "path": "../.."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
