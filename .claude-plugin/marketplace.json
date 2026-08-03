@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "humanizer-pro",
+  "description": "Humanizer PRO writing and naturalness tools for Claude Code.",
+  "owner": {
+    "name": "Khadin Akbar Labs",
+    "url": "https://texthumanizer.pro"
+  },
+  "plugins": [
+    {
+      "name": "humanizer-pro",
+      "version": "1.1.0",
+      "source": "./",
+      "description": "Rewrite text, analyze naturalness, and check Humanizer PRO account balance.",
+      "category": "Productivity",
+      "tags": [
+        "writing",
+        "humanizer",
+        "rewriting",
+        "mcp"
+      ],
+      "strict": true
+    }
+  ]
+}
