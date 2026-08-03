@@ -1,6 +1,6 @@
 {
   "name": "humanizer-pro",
   "description": "Humanizer PRO text rewriting and naturalness workflow for Gemini CLI.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "contextFileName": "GEMINI.md"
 }

@@ -1,6 +1,6 @@
 {
   "name": "humanizer-pro",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Rewrite text for clarity and natural readability with the hosted Humanizer PRO service.",
   "author": {
     "name": "Khadin Akbar Labs",
@@ -24,7 +24,7 @@
   "interface": {
     "displayName": "Humanizer PRO",
     "shortDescription": "Rewrite text for clearer, more natural reading.",
-    "longDescription": "Connect Humanizer PRO to rewrite authorized text in Stealth, Academic, or SEO mode, analyze writing naturalness, check word balance, and view plans through the hosted OAuth MCP service.",
+    "longDescription": "Connect Humanizer PRO to rewrite authorized text in Stealth, Academic, or SEO mode, analyze writing naturalness, and check word balance through the hosted OAuth MCP service.",
     "developerName": "Khadin Akbar Labs",
     "category": "Productivity",
     "capabilities": [

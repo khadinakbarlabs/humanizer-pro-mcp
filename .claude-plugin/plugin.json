@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "humanizer-pro",
   "displayName": "Humanizer PRO",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Rewrite text for clarity and natural readability with the hosted Humanizer PRO service.",
   "author": {
     "name": "Khadin Akbar Labs",

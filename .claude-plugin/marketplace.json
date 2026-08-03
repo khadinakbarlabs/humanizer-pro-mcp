@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "humanizer-pro",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "source": "./",
       "description": "Rewrite text, analyze naturalness, and check Humanizer PRO account balance.",
       "category": "Productivity",

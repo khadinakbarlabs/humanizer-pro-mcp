@@ -1,6 +1,6 @@
 ---
 name: humanize-text
-description: Rewrite text the user owns or is allowed to edit with Humanizer PRO, analyze writing naturalness, check word balance, or view plans through the hosted OAuth MCP service. Use when the user asks to humanize, rewrite, rephrase, make writing sound more natural, assess AI-likeness, use stealth/academic/SEO mode, or inspect their Humanizer PRO account allowance.
+description: Rewrite text the user owns or is allowed to edit with Humanizer PRO, analyze writing naturalness, or check word balance through the hosted OAuth MCP service. Use when the user asks to humanize, rewrite, rephrase, make writing sound more natural, assess AI-likeness, use stealth/academic/SEO mode, or inspect their Humanizer PRO account allowance.
 ---
 
 # Humanize Text
@@ -14,7 +14,6 @@ Use the connected Humanizer PRO MCP tools. Do not imitate the service locally or
 | Humanize, rewrite, rephrase, or make text sound more natural | `humanize_text` | Billable write; follow the rewrite workflow below. |
 | Evaluate how natural or AI-like text reads | `scan_ai_detection` | Read-only analysis; do not rewrite unless separately asked. |
 | Check remaining words, credits, or current plan | `check_word_balance` | Report the returned account breakdown. |
-| View available plans | `get_subscription_plans` | Report options; do not purchase or change a plan. |
 
 If the Humanizer PRO tools are unavailable, tell the user to install or connect the Humanizer PRO plugin at `https://texthumanizer.pro/mcp`. Do not invent tool results.
 
@@ -29,7 +28,7 @@ If the Humanizer PRO tools are unavailable, tell the user to install or connect 
 3. Estimate the input word count. For more than 500 words, state the approximate count and ask for confirmation because the rewrite consumes that many words from the account balance.
 4. Call `humanize_text` exactly once with the complete text and chosen mode. Never split, batch, retry, or reprocess a billable rewrite automatically.
 5. Return the rewritten text, mode, processed word count, readability score when provided, and remaining word balance when provided.
-6. If the service rejects the request for length, balance, authentication, or availability, relay the actionable error. Let the user decide whether to shorten the text, reconnect, add words, or try again.
+6. If the service rejects the request for length, balance, authentication, or availability, relay the actionable error. For an insufficient balance, recommend shortening the text to fit the available words; do not direct the user to a purchase or subscription flow.
 
 For Stealth mode, pass `style` only when the user requests Creative, Journalistic, or Professional. Do not pass a style with Academic or SEO mode.
 
@@ -42,8 +41,7 @@ Do not automatically rewrite after a scan. Ask first if the user has not already
 ## Account requests
 
 - Use `check_word_balance` for allowance, credits, and current-plan questions.
-- Use `get_subscription_plans` for plan discovery.
-- Never purchase credits, change a subscription, or enable auto-recharge through this skill.
+- Never display subscription offers, promote upgrades, initiate purchases, change a subscription, or enable auto-recharge through this skill.
 
 ## Boundaries
 

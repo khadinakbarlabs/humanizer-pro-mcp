@@ -4,7 +4,7 @@
 [![validate](https://github.com/khadinakbarlabs/humanizer-pro-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/khadinakbarlabs/humanizer-pro-mcp/actions/workflows/validate.yml)
 [![license](https://img.shields.io/badge/license-MIT-6d5ef5)](LICENSE)
 
-Humanizer PRO connects AI clients to the hosted Humanizer PRO text-editing service. It can rewrite text you own or are allowed to edit in Stealth, Academic, or SEO mode, analyze writing naturalness, check your word balance, and show available plans.
+Humanizer PRO connects AI clients to the hosted Humanizer PRO text-editing service. It can rewrite text you own or are allowed to edit in Stealth, Academic, or SEO mode, analyze writing naturalness, and check your word balance.
 
 This repository is the official open-source distribution package. It contains the portable `humanize-text` Agent Skill, native Claude Code and Codex plugin manifests, marketplace metadata, and the remote MCP connection. The proprietary rewriting engine, billing logic, and service credentials remain hosted at [texthumanizer.pro](https://texthumanizer.pro).
 
@@ -83,7 +83,6 @@ Then sign in with your Humanizer PRO account. Public ChatGPT app directory avail
 | Humanize or rewrite authorized text | `humanize_text` | Uses Stealth, Academic, or SEO mode and deducts the processed words from the account balance. |
 | Analyze writing naturalness | `scan_ai_detection` | Returns estimated AI-likeness and human-likeness signals without rewriting. |
 | Check remaining usage | `check_word_balance` | Returns plan, subscription words, purchased credits, and total available words. |
-| View plans | `get_subscription_plans` | Returns available plans and the current plan without purchasing anything. |
 
 The workflow confirms rewrites over 500 words, sends the complete text in one call, prevents automatic billable retries, and reports the remaining balance when available.
 

@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const VERSION = "1.1.0";
+const VERSION = "1.1.1";
 const MCP_URL = "https://texthumanizer.pro/mcp";
 const TEXT_EXTENSIONS = new Set(["", ".json", ".md", ".mjs", ".yaml", ".yml", ".txt"]);
 const EXCLUDED_DIRECTORIES = new Set([".git", "node_modules", "dist"]);
