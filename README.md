@@ -19,6 +19,9 @@ This repository is the official open-source distribution package. It contains th
 
 Claude loads the skill and the hosted MCP server. Sign in with your Humanizer PRO account when the first tool requires authentication.
 
+For Cline, use the dedicated [installation guide](llms-install.md) or add the
+remote HTTP endpoint `https://texthumanizer.pro/mcp` from Cline's MCP settings.
+
 ### OpenAI Codex
 
 ```bash
