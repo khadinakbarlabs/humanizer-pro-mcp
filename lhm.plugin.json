@@ -1,0 +1,35 @@
+{
+  "identifier": "khadinakbarlabs-humanizer-pro-mcp",
+  "name": "Humanizer PRO",
+  "version": "1.1.1",
+  "description": "Humanize text you own or are authorized to edit, analyze naturalness, and check your Humanizer PRO word balance through the hosted MCP service.",
+  "category": "productivity",
+  "author": "Khadin Akbar Labs",
+  "authorUrl": "https://github.com/khadinakbarlabs",
+  "homepage": "https://texthumanizer.pro/mcp-docs",
+  "icon": "https://raw.githubusercontent.com/khadinakbarlabs/humanizer-pro-mcp/main/assets/logo.png",
+  "cloudEndpoint": "https://texthumanizer.pro/mcp",
+  "tags": [
+    "mcp",
+    "text-humanization",
+    "text-rewriting",
+    "writing",
+    "seo"
+  ],
+  "tools": [
+    {
+      "name": "humanize_text",
+      "description": "Rewrite authorized text in Stealth, Academic, or SEO mode."
+    },
+    {
+      "name": "scan_ai_detection",
+      "description": "Analyze text for estimated AI-likeness and human-likeness signals."
+    },
+    {
+      "name": "check_word_balance",
+      "description": "Check the authenticated user's Humanizer PRO plan and available word balance."
+    }
+  ],
+  "resources": [],
+  "prompts": []
+}
